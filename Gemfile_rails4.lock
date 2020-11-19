@@ -3,6 +3,7 @@ PATH
   specs:
     discourse_plugin (0.0.1)
 
+
 PATH
   remote: vendor/gems/rails_multisite
   specs:

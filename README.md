@@ -1,5 +1,7 @@
  Note: This is a fork of Discourse specifically for [deploying to Heroku](docs/HEROKU.md).  //2017 
-
+  -2020fork  set a currently supported  verson like ruby '2.7.2' , important to smooth heroku
+  -2020Run `bundle install` elsewhere and add the        updated Gemfile_rails4.lock to version control.
+  
 <a href="http://www.discourse.org/">![Logo](images/discourse.png)</a>
 
 Discourse is the 100% open source, next-generation discussion platform built for the next decade of the Internet.
