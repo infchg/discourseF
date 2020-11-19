@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.7.2'   #need a currently supported  verson like ruby '2.7.2' , important to smooth heroku
 
 # monkey patching to support dual booting
 module Bundler::SharedHelpers
