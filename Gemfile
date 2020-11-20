@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.7.2'   #need a currently supported  verson like ruby '2.7.2' , important to smooth heroku
+ruby '2.5.1'  
 
 # monkey patching to support dual booting
 module Bundler::SharedHelpers
@@ -51,14 +51,16 @@ if rails4?
     gem 'rails', git: 'https://github.com/rails/rails.git'
     gem 'actionpack-action_caching', git: 'https://github.com/rails/actionpack-action_caching.git'
   else
-    gem 'rails'
+     #hit here gem 'jcjc','4.2.10'
+
+    gem 'rails','4.2.10'
     gem 'actionpack-action_caching'
   end
   gem 'rails-observers'
 else
   # we had pain with the 3.2.13 upgrade so monkey patch the security fix
   # next time around we hope to upgrade
-  gem 'rails', '3.2.12'
+  gem 'rails' , '4.2.10' #jc, '3.2.12'
   gem 'strong_parameters' # remove when we upgrade to Rails 4
   # we are using a custom sprockets repo to work around: https://github.com/rails/rails/issues/8099#issuecomment-16137638
   # REVIEW EVERY RELEASE
@@ -67,13 +69,13 @@ else
   gem 'active_attr'
 end
 
-#gem 'redis-rails'
-gem 'hiredis'
+gem 'redis-rails'
+#gem 'hiredis'
 gem 'redis', :require => ["redis", "redis/connection/hiredis"]
 
 gem 'active_model_serializers'
 
-gem 'html_truncator'
+#gem 'html_truncator'
 
 # we had issues with latest, stick to the rev till we figure this out
 # PR that makes it all hang together welcome
@@ -85,16 +87,16 @@ gem 'barber'
 gem 'message_bus'
 gem 'rails_multisite', path: 'vendor/gems/rails_multisite'
 
-gem 'redcarpet', require: false
-gem 'airbrake', '3.1.2', require: false # errbit is broken with 3.1.3 for now
-gem 'sidetiq', '>= 0.3.6'
+#gem 'redcarpet', require: false
+#gem 'airbrake', '3.1.2', require: false # errbit is broken with 3.1.3 for now
+#gem 'sidetiq' #, '>= 0.3.6'
 gem 'eventmachine'
 gem 'fast_xs'
 
 gem 'fast_xor'
 gem 'fastimage'
-gem 'fog', '1.18.0', require: false
-gem 'unf', require: false
+#gem 'fog', '1.18.0', require: false
+#gem 'unf', require: false
 
 # see: https://twitter.com/samsaffron/status/412360162297393152
 # Massive amount of changes made in branch we use, no PR upstreamed
@@ -110,38 +112,38 @@ gem 'image_optim'
 gem 'image_sorcery'
 gem 'multi_json'
 gem 'mustache'
-gem 'nokogiri'
+gem 'nokogiri', '1.8.2'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
-gem 'omniauth-facebook'
-gem 'omniauth-twitter'
-gem 'omniauth-github'
-gem 'omniauth-oauth2', require: false
+#gem 'omniauth-facebook'
+#gem 'omniauth-twitter'
+#gem 'omniauth-github'
+#gem 'omniauth-oauth2', require: false
 # abandoned gem hard to tell what is going on, multiple PRs upstream being ignored:
 # https://twitter.com/samsaffron/status/412372111710109696
 # we use: gem 'omniauth-browserid', git: 'https://github.com/samsaffron/omniauth-browserid.git', branch: 'observer_api'
 gem 'omniauth-browserid-discourse', require: 'omniauth-browserid'
-gem 'omniauth-cas'
-gem 'oj'
+#gem 'omniauth-cas3'  #3
+gem 'oj', '3.4.0'
 # while resolving https://groups.google.com/forum/#!topic/ruby-pg/5_ylGmog1S4
-gem 'pg', '0.15.1'
+gem 'pg', '0.19.0'
 gem 'rake'
 
 
 gem 'rest-client'
 gem 'rinku'
-gem 'sanitize'
+#gem 'sanitize'
 gem 'sass'
-gem 'sidekiq', '2.15.1'
-gem 'sidekiq-failures'
+gem 'sidekiq', '5.0.4' #, '2.15.1'
+#gem 'sidekiq-failures'
 gem 'sinatra', require: nil
 gem 'slim'  # required for sidekiq-web
 
 # URGENT fix needed see: https://github.com/cowboyd/therubyracer/pull/280
 gem 'therubyracer-discourse', require: 'v8'
-gem 'thin', require: false
-gem 'highline', require: false
+#gem 'thin', require: false
+#gem 'highline', require: false
 gem 'rack-protection' # security
 
 # Gems used only for assets and not required
@@ -173,7 +175,7 @@ group :test, :development do
   gem 'rspec-given'
   gem 'pry-rails'
   gem 'pry-nav'
-  gem 'spork-rails'
+ gem 'spork-rails'
 end
 
 group :development do
@@ -199,23 +201,23 @@ gem 'lru_redux'
 #  If you want to amend mini profiler to do the monkey patches in the railstie
 #  we are open to it. by deferring require to the initializer we can configure disourse installs without it
 
-gem 'flamegraph', require: false
-gem 'rack-mini-profiler', require: false
+#gem 'flamegraph', require: false
+#gem 'rack-mini-profiler', require: false
 
 # used for caching, optional
-gem 'rack-cors', require: false
-gem 'unicorn', require: false
-gem 'puma', require: false
-gem 'rbtrace', require: false, platform: :mri
+#gem 'rack-cors', require: false
+#gem 'unicorn', require: false
+#gem 'puma', require: false
+#gem 'rbtrace', require: false, platform: :mri
 
 # Heroku (but useful anywhere) stuff
-gem 'unicorn-worker-killer'
-gem 'newrelic_rpm'
-gem 'honeybadger'
+#gem 'unicorn-worker-killer'
+#gem 'newrelic_rpm'
+#gem 'honeybadger'
 
 # required for feed importing and embedding
-gem 'ruby-readability', require: false
-gem 'simple-rss', require: false
+#gem 'ruby-readability', require: false
+#gem 'simple-rss', require: false
 
 # perftools only works on 1.9 atm
 group :profile do

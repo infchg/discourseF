@@ -1,6 +1,14 @@
  Note: This is a fork of Discourse specifically for [deploying to Heroku](docs/HEROKU.md).  //2017 
-  -2020fork  set a currently supported  verson like ruby '2.7.2' , important to smooth heroku
-  -2020Run `bundle install` elsewhere and add the        updated Gemfile_rails4.lock to version control.
+  -2020fork  set a currently supported  verson like ruby 251 or '2.7.2' , important to smooth heroku
+  -2020added ruby - openssl-     ruby-atomic ruby-all-dev ruby- -dev   commented  #gem 'spork-rails'
+   - gem update --system    and update gem list bundler     libc dev/stdio   libgcc musl-dev linux-headers
+   - ln -s /usr/src/linux-headers-4.18.0-25/include/uapi/linux/ /usr/include/x86_64-linux-gnu/ruby-2.5.0/linux   and lib-gmp
+   - env solid   to install packages and set their .lock versions  eventm ffi nokogiri , gem breaks on blanspaces !  list|grep noko, 
+    # and cleaned lock files : grep '^    \S*' -o  --color k | sort
+
+#gem 'eventmachine' openssl 1 1 1  lib stream
+
+  -2020Run `bundle install` Fetching gem metadata from https://rubygems.org/......    updated Gemfile_rails4.lock to version control.
   
 <a href="http://www.discourse.org/">![Logo](images/discourse.png)</a>
 
