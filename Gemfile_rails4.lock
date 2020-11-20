@@ -188,7 +188,7 @@ PLATFORMS
 DEPENDENCIES
   actionpack-action_caching
   active_model_serializers
-  airbrake (= 3.1.2)
+  airbrake 
   annotate
   barber
   better_errors
@@ -197,24 +197,24 @@ DEPENDENCIES
   discourse_plugin!
   email_reply_parser-discourse
   ember-rails
-  ember-source (~> 1.2.0.1)
+  ember-source  
   eventmachine
   fabrication
-  fakeweb (~> 1.3.0)
+  fakeweb 
   fast_blank
   fast_xor
   fast_xs
   fastimage
   flamegraph
   fog (= 1.18.0)
-  handlebars-source (~> 1.1.2)
+  handlebars-source  
   highline
   hiredis
   html_truncator
   image_optim
   image_sorcery
-  librarian (>= 0.0.25)
-  listen (= 0.7.3)
+  librarian  
+  listen 
   lru_redux
   message_bus
   minitest
@@ -233,7 +233,7 @@ DEPENDENCIES
   omniauth-openid
   omniauth-twitter
   openid-redis-store
-  pg (= 0.15.1)
+  pg  
   pry-nav
   pry-rails
   puma
@@ -246,7 +246,7 @@ DEPENDENCIES
   rails_multisite!
   rake
   rb-fsevent
-  rb-inotify (~> 0.9)
+  rb-inotify  
   rbtrace
   redcarpet
   redis

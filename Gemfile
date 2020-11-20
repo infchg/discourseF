@@ -53,14 +53,14 @@ if rails4?
   else
      #hit here gem 'jcjc','4.2.10'
 
-    gem 'rails','4.2.10'
+    gem 'rails'#, ','4.2.10'
     gem 'actionpack-action_caching'
   end
   gem 'rails-observers'
 else
   # we had pain with the 3.2.13 upgrade so monkey patch the security fix
   # next time around we hope to upgrade
-  gem 'rails' , '4.2.10' #jc, '3.2.12'
+  gem 'rails'  #, '4.2.10' #jc, '3.2.12'
   gem 'strong_parameters' # remove when we upgrade to Rails 4
   # we are using a custom sprockets repo to work around: https://github.com/rails/rails/issues/8099#issuecomment-16137638
   # REVIEW EVERY RELEASE
@@ -80,8 +80,8 @@ gem 'active_model_serializers'
 # we had issues with latest, stick to the rev till we figure this out
 # PR that makes it all hang together welcome
 gem 'ember-rails'
-gem 'ember-source', '~> 1.2.0.1'
-gem 'handlebars-source', '~> 1.1.2'
+gem 'ember-source'#, ', '~> 1.2.0.1'
+gem 'handlebars-source'#, ', '~> 1.1.2'
 gem 'barber'
 
 gem 'message_bus'
@@ -112,7 +112,7 @@ gem 'image_optim'
 gem 'image_sorcery'
 gem 'multi_json'
 gem 'mustache'
-gem 'nokogiri', '1.8.2'
+gem 'nokogiri'#, ', '1.8.2'
 gem 'omniauth'
 gem 'omniauth-openid'
 gem 'openid-redis-store'
@@ -135,7 +135,7 @@ gem 'rest-client'
 gem 'rinku'
 #gem 'sanitize'
 gem 'sass'
-gem 'sidekiq', '5.0.4' #, '2.15.1'
+gem 'sidekiq'#, ', '5.0.4' #, '2.15.1'
 #gem 'sidekiq-failures'
 gem 'sinatra', require: nil
 gem 'slim'  # required for sidekiq-web
@@ -155,13 +155,13 @@ group :assets do
 end
 
 group :test do
-  gem 'fakeweb', '~> 1.3.0', require: false
+  gem 'fakeweb'#, ', '~> 1.3.0', require: false
   gem 'minitest', require: false
 end
 
 group :test, :development do
   gem 'mock_redis'
-  gem 'listen', '0.7.3', require: false
+  gem 'listen' #, '0.7.3', require: false
   gem 'certified', require: false
   gem 'fabrication', require: false
   gem 'qunit-rails'
@@ -181,7 +181,7 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'librarian', '>= 0.0.25', require: false
+  gem 'librarian'  #, '>= 0.0.25', require: false
   gem 'annotate'
 end
 
