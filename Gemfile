@@ -125,9 +125,9 @@ gem 'openid-redis-store'
 # we use: gem 'omniauth-browserid', git: 'https://github.com/samsaffron/omniauth-browserid.git', branch: 'observer_api'
 gem 'omniauth-browserid-discourse', require: 'omniauth-browserid'
 #gem 'omniauth-cas3'  #3
-gem 'oj', '3.4.0'
+gem 'oj'#, '3.4.0'
 # while resolving https://groups.google.com/forum/#!topic/ruby-pg/5_ylGmog1S4
-gem 'pg', '0.19.0'
+gem 'pg'#, '0.19.0'
 gem 'rake'
 
 

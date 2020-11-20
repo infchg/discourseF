@@ -6,7 +6,7 @@ PATH
 PATH
   remote: vendor/gems/rails_multisite
   specs:
-    rails_multisite (0.0.1)
+    rails_multisite 
 
 GEM
   remote: https://rubygems.org/
@@ -206,7 +206,7 @@ DEPENDENCIES
   fast_xs
   fastimage
   flamegraph
-  fog (= 1.18.0)
+  fog  
   handlebars-source  
   highline
   hiredis
